@@ -14,8 +14,14 @@
  *= require_self
  */
 
+@import "bootstrap";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
 .container{
   text-align: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .field{
@@ -28,4 +34,9 @@ input{
   font_size: 16px;
   border_radius: 3px;
   border: 2px solid #ddd;
+}
+
+.header{
+  width: 100%;
+  margin: 0 auto;
 }

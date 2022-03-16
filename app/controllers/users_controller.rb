@@ -17,6 +17,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @movie = Movie.new
   end
 
   private

@@ -1,0 +1,17 @@
+<div>
+  <%= form_with model: @movie, local: true do |f| %>
+    <div>
+      <%= f.label :title, "Title" %>
+      <%= f.text_field :title, value: @movie.title, class: "form-control"%>
+    </div>
+    <div class="form-group">
+      <%= f.label :body, "Opinion" %>
+      <%= f.text_area :body, value: @movie.body, class: "form-control" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Update MEMO", class: "btn btn-success" %>
+    </div>
+  <% end %>
+    <%= link_to "メモ詳細へ", movie_path(params[:id]) %>
+    <%= link_to "メモ一覧へ", movies_path(params[:id]) %>
+</div>

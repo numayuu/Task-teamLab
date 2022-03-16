@@ -10,10 +10,11 @@
   </head>
 
   <body>
-    <%= notice %>
-    <%= alert %>
-    <div class="container">
-      <%= yield %>
-    </div>
+    <%= render 'layouts/header' %>
+      <%= notice %>
+      <%= alert %>
+      <div class="container">
+        <%= yield %>
+      </div>
   </body>
 </html>

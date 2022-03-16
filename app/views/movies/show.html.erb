@@ -1,0 +1,9 @@
+<div>
+  <h3>メモ詳細</h3>
+  <tr>
+    <td><%= @movie.title %></td>
+    <td><%= @movie.body %></td>
+      <%= link_to "投稿編集", edit_movie_path(@movie), class: "btn btn-success btn-sm mx-2" %>
+      <%= link_to "投稿削除", movie_path(@movie), method: :delete, "data-confirm" => "本当に消しますか？", class: "btn btn-danger btn-sm" %>
+  </tr>
+</div>
