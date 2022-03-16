@@ -1,7 +1,15 @@
-<h1>welcome</h1>
-
-<p>You are logged in as "<strong><%= current_user.email %></strong>".</p>
-<%= link_to "Logout", logout_path, method: :delete %>
-
-<h1>新規メモへ</h1>
-<%= link_to "新規メモ", new_movie_path %>
+<h1>ようこそ</h1>
+<div>
+  <div>
+    <p>"<strong><%= current_user.email %></strong>"さん.</p>
+    <%= link_to "ログアウト", logout_path, method: :delete %>
+  </div>
+  <div>
+    <h3>新しい映画をMemo</h3>
+    <%= link_to "新規Memo作成", new_movie_path %>
+  </div>
+  <div>
+    <h3>メモリーをcheck</h3>
+    <%= link_to "Memo一覧へ", movies_path %>
+  </div>
+</div>

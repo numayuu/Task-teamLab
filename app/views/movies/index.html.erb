@@ -1,13 +1,26 @@
- <div>
-  <table>
-    <h2>メモ一覧</h2>
-      <th>タイトル</th>
-      <th>評価</th>
-      <% @movies.each do |movie| %>
-        <tr>
-          <td><%= link_to movie.title, movie_path(movie.id) %></td>
-          <td><%= movie.body %></td>
-        </tr>
-      <% end %>
-  </table>
+<div class="container">
+  <h2>Memo一覧</h2>
+  <div class="t1">
+    <% @movies.each do |movie| %>
+      <div class="col-8 mt-4">
+        <div class="card"　style="width: 18rem;">
+          <h4>作品名</h4>
+          <h5 style="margin: 5px 5px 20px 5px;" class="card border-dark">
+            <%= link_to movie_path(movie.id), style: "color: black;" do %>
+            <%= movie.title %>
+            <% end %>
+          </h5>
+          <p class="card border-dark" style="margin: 5px;">
+            <h4>コメント</h4>
+            <%= truncate(movie.body) %>
+          </p>
+          <p class="card-text text-right">
+            <small class="text-muted">
+              <%= movie.created_at.strftime('%Y/%m/%d') %>
+            </small>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

@@ -1,9 +1,20 @@
-<div>
-  <h3>メモ詳細</h3>
-  <tr>
-    <td><%= @movie.title %></td>
-    <td><%= @movie.body %></td>
-      <%= link_to "投稿編集", edit_movie_path(@movie), class: "btn btn-success btn-sm mx-2" %>
-      <%= link_to "投稿削除", movie_path(@movie), method: :delete, "data-confirm" => "本当に消しますか？", class: "btn btn-danger btn-sm" %>
-  </tr>
+<div class="container">
+    <div style="padding: 30px;">
+      <h3><i class="fas fa-pen"></i>Memo詳細</h3>
+      <%= link_to "Memo編集", edit_movie_path(@movie), class: "btn btn-success btn-sm mx-2" %>
+      <%= link_to "Memo削除", movie_path(@movie), method: :delete, "data-confirm" => "本当に消しますか？", class: "btn btn-danger btn-sm" %>
+    </div>
+  <div class="row card t3">
+    <div>
+      <h4>作品名</h4>
+      <h4><%= @movie.title %></h4>
+    </div>
+    <div>
+      <h4>コメント</h4>
+      <td><%= @movie.body %></td>
+    </div>
+    <div style="text-align: right;">
+      <span><%= @movie.created_at.strftime('%Y/%m/%d') %> </span>
+    </div>
+  </div>
 </div>

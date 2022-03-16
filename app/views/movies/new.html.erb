@@ -1,9 +1,14 @@
-<h1>新規投稿</h1>
-<!-- form_with部分 -->
-<%= form_with model: @movie, url: movies_path, local:true do |f| %>
-  <h4>タイトル</h4>
-  <%= f.text_field :title %>
-  <h4>本文</h4>
-  <%= f.text_area :body %>
-  <%= f.submit '投稿' %>
-<% end %>
+<h1>新規Memo</h1>
+<div class="mt-4 card">
+  <%= form_with model: @movie, url: movies_path, local:true do |f| %>
+    <div>
+      <h4>作品名</h4>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <h4>コメント</h4>
+      <%= f.text_area :body %>
+    </div>
+    <%= f.submit 'メモを作成する', class: "btn mb-2", style: "background-color: #78d8e3; color: black;" %>
+  <% end %>
+</div>
