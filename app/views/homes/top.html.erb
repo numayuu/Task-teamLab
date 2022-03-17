@@ -1,17 +1,21 @@
-<h1>Hello!</h1>
-
-
-<h2>Movieメモリとは、<br>
-観た映画の記憶（メモリー）をMemo<i class="fas fa-pencil-alt"></i><br>
-あなたの思い出を増やしていこう！！
-</h2>
-<table class="">
-  <tr>
-    <td>
-      <%= link_to "新規の方はこちら", new_user_path, class:"btn btn-success btn-sm btn-block mb-3 sign_up" %>
-    </td>
-    <td>
-      <%= link_to "登録済の方はこちら", login_path, class:"btn btn-info btn-sm btn-block mb-3 sign_in" %>
-    </td>
-  </tr>
-</table>
+<div class="row top1">
+  <div class="col-md-7 mx-auto">
+    <div class="card">
+      <h1 style="padding: 20px;">Hello!</h1>
+      <h2 style="padding: 10px;">
+      観た映画の記憶（メモリー）をMemo<i class="fas fa-pencil-alt"></i><br>
+      あなたの思い出を増やしていこう！！
+      </h2>
+      <div class="">
+        <tr>
+          <td>
+            <%= link_to "新規の方はこちら", new_user_path, class:"btn btn-success btn-sm btn-block mb-3 sign_up" %>
+          </td>
+          <td>
+            <%= link_to "登録済の方はこちら", login_path, class:"btn btn-info btn-sm btn-block mb-3 sign_in" %>
+          </td>
+        </tr>
+      </div>
+    </div>
+  </div>
+</div>

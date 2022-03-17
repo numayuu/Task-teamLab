@@ -1,4 +1,4 @@
-<h1>Sign up</h1>
+<h1>サインアップ</h1>
 
 <%= form_with model: @user, url: user_path, local: true do |f| %>
   <div class="field">
@@ -16,8 +16,8 @@
     <%= f.password_field :password_confirmation %>
   </div>
   <div>
-    <%= f.submit "Sign up" %>
+    <%= f.submit "サインアップ" %>
   </div>
 
-  <%= link_to "Login", login_path %>
+  <%= link_to "ログイン", login_path %>
 <% end %>

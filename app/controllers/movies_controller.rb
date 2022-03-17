@@ -18,7 +18,7 @@ class MoviesController < ApplicationController
   def create
     @movie = Movie.new(movie_params)
     if @movie.save
-      flash[:notice]="You have creatad book successfully."
+      flash[:notice]="Memoを作成しました。"
       redirect_to movies_path(@movie)
     else
       @user = current_user
@@ -34,7 +34,7 @@ class MoviesController < ApplicationController
   def update
     @movie = Movie.find(params[:id])
     if @movie.update(movie_params)
-      flash[:notice]="メモを更新しました。"
+      flash[:notice]="Memoを更新しました。"
       redirect_to movies_path(@movie.id)
     else
       render :edit
@@ -44,7 +44,7 @@ class MoviesController < ApplicationController
   def destroy
     @movie = Movie.find(params[:id])
     if @movie.destroy
-      flash[:notice]="メモを削除しました。"
+      flash[:notice]="Memoを削除しました。"
       redirect_to movies_path
     end
   end

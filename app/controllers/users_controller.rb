@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       session[:user_id] = user.id
-      redirect_to user_path, notice: "You have successfully sinYou have successfully signed in"
+      redirect_to user_path, notice: "サインインしました。"
     else
       render :new
     end

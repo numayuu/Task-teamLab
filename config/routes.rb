@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'homes#top'
+  get 'homes/about'
   resources :movies
   resource :user, only: [:new, :create, :show]
   get 'login', to: "sessions#new"
